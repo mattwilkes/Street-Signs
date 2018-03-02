@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<canvas id="myCanvas" width="400" height="200"></canvas>
+<script>
+var canvas = document.querySelector("#myCanvas");
+var ctx = canvas.getContext("2d");
+
+ctx.strokeStyle = "red";
+ctx.fillStyle = "red";
+ctx.scale(2,2)
+
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+
+ctx.fill();
+ctx.stroke();
+
+ctx.lineWidth = 5;
+ctx.beginPath();
+ctx.moveTo(63, 50);
+ctx.lineTo(126, 50);
+ctx.stroke();
+
+ctx.strokeStyle = "white";
+ctx.lineWidth = 10;
+ctx.stroke();
+
+// draw STOP text
+ctx.fillStyle  = "white";
+ctx.font = "bold 12px Arial";
+ctx.fillText( "DO NOT" ,71, 38);
+ctx.fillText( "ENTER" ,73, 69);
+
+</script>
+<body>
+
+</body>
+</html>

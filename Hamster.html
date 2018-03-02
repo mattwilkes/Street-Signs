@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<style>
+#hamster{
+opacity:0;
+}
+</style>
+<canvas id="myCanvas" width="400" height="300"></canvas>
+<img src ="hamster.png" id = "hamster">
+<script>
+window.onload = function(){
+var canvas = document.querySelector("#myCanvas");
+var ctx = canvas.getContext("2d");
+var image = document.getElementById("hamster");
+
+ctx.scale(0.8,0.8);
+ctx.drawImage(image,100,30);
+
+
+ctx.strokeStyle = "red";
+ctx.fillStyle = "red";
+ctx.scale(2,2);
+
+ctx.beginPath();
+ctx.lineWidth = 7
+ctx.arc(95,50,45,0,2*Math.PI);
+
+ctx.stroke();
+
+ctx.lineWidth = 5;
+ctx.beginPath();
+ctx.moveTo(55, 25);
+ctx.lineTo(135, 75);
+ctx.stroke();
+
+ctx.strokeStyle = "red";
+ctx.lineWidth = 10;
+ctx.stroke();
+
+// draw STOP text
+ctx.fillStyle  = "red";
+ctx.font = "bold 12px Arial";
+ctx.fillText( "NO HAMSTERS!" ,52, 110);
+};
+</script>
+<body>
+
+</body>
+</html>

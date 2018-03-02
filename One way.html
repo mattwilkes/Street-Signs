@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<canvas id="myCanvas" width="500" height="600"></canvas>
+<script>
+var canvas = document.querySelector("#myCanvas");
+var ctx = canvas.getContext("2d");
+
+ctx.save();		
+ctx.lineWidth = 32;	      	
+ctx.lineJoin = "round";	  
+ctx.strokeStyle = "blue";
+ctx.fillStyle = "blue";
+
+
+ctx.beginPath();
+ctx.moveTo(100, 100);
+ctx.lineTo(350, 100);
+ctx.lineTo(350, 450);
+ctx.lineTo(100, 450);
+
+ctx.closePath();
+
+
+ctx.fill();
+ctx.stroke();
+ctx.strokeStyle = "white";
+ctx.lineWidth = 5;
+ctx.stroke();
+
+ctx.fillStyle = 'white';
+ctx.beginPath();
+ctx.moveTo(225, 130);
+ctx.lineTo(315, 200);
+ctx.lineTo(135, 200);
+
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+
+ctx.beginPath();
+ctx.lineWidth = 75;
+ctx.beginPath();
+ctx.moveTo(225, 400);
+ctx.lineTo(225, 200);
+ctx.stroke();
+ctx.fill();
+
+
+
+
+
+
+
+ctx.fillStyle  = "blue";
+ctx.font = "bold 60px Arial";
+ctx.fillText( "ONE WAY" ,90, 525);
+ctx.restore();
+</script>
+<body>
+
+</body>
+</html>
